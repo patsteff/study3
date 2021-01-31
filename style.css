@@ -45,7 +45,7 @@ p {
 #images {
   height: 500px;
   width: 30%;
-  background: url("img/schneeeule.png");
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/c9/Schneeeule.JPG");
   background-size: cover;
   background-color: steelblue;
 }
