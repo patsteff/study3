@@ -16,6 +16,27 @@ h1 {
   text-decoration: none;
 }
 
+.container-head {
+  width: 80vw;
+  height: 80vh;
+  background-color: #61704B;
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.item {
+  background-color: white;
+  line-height: 50px;
+  width: 350px;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
 p {
   text-transform: lowercase;
   text-align: justify; /* look streamline, often in academic papers */
@@ -72,6 +93,10 @@ img {
   flex-wrap: nowrap; /* wrap or nowrap (gibt auch reverse)*/
   justify-content: center; /* end of container oder flex-start, center is common. space-between equally, space-around also edges*/
   align-items: center; /* flex-start oder end, center are common. stretch align all the way through. baseline mach andere lineheight B*/
+}
+
+h2 {
+  text-transform: uppercase;
 }
 
 .container-item {
