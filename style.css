@@ -138,9 +138,11 @@ h2 {
   font-weight: 600;
   color: white;
   background: rgb(89, 150, 255);
-  transition: background 2s ease-in-out 1s;
+  -webkit-transition: background, padding 2s ease-in-out 1s;
+  -moz-transition: background, padding 2s ease-in-out 1s;
 }
 
 .submit-button:hover {
   background: rgb(147,187,255);
+  padding: 20px 30px;
 }
