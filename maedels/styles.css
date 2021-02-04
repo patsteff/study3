@@ -9,6 +9,10 @@
   width: 600px;
   background: white;
   color: black;
+}
+
+.extra {
+  display: grid;
   place-items: center;
 }
 
