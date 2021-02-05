@@ -56,6 +56,25 @@ section p {
 #hero img {
   max-width: 130% !important;
   width: 100%;
+}
+
+#hero .card {
+  box-shadow: 11px 7px 16px lightgrey;
+  border: 0;
+}
+
+#hero i {
+  color; red;
+  color: #06656F;
+}
+
+#contact {
+  text-align: center;
+  background-color: #82D7C7;
+  color: white;
+}
+
+#contact h2 {
 
 }
 
