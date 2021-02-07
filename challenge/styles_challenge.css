@@ -1,0 +1,36 @@
+/*
+primary font:
+secondary font:
+blue: #6783C2
+redorange: #D61B1D
+*/
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  width: 400px;
+  height: 200px;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 50px;
+}
+
+.sidebar {
+  background-color: #E4A241;
+}
+
+.content {
+  background: #C9C8D8;
+}
+
+.subtitle {
+  color: #D61B1D;
+}
+
+.topic-subtitle {
+  color: #6783C2;
+}
