@@ -5,6 +5,11 @@ blue: #6783C2
 redorange: #D61B1D
 */
 body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 2;
+}
+
+h1, h2 {
   font-family: 'Lato', sans-serif;
 }
 
@@ -21,10 +26,11 @@ img {
 
 .sidebar {
   background-color: #E4A241;
-}
+  padding-left: 20px;
 
 .content {
   background: #C9C8D8;
+  padding-left: 20px;
 }
 
 .subtitle {
