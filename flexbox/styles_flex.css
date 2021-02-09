@@ -1,0 +1,73 @@
+html, body {
+  background-color: #AE7093;
+  height: 100%;
+}
+
+.menu {
+  color: #2D34C3;
+  font-family: 'Comfortaa', cursive;
+  font-size: 32px;
+  border: 5px dotted #2D34C3;
+  padding: 10px;
+  margin: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: #C5D6DF;
+  padding: 20px;
+  margin: 10px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: #C5D6DF;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* will be pushed to right hand side when margin left (wenn search, dann auch logout ist rechts) */
+#home2 {
+  margin-right: auto;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  background: #C5D6DF;
+  padding: 20px;
+  margin: 10px;
+}
+
+.container3 > div {
+  flex: 1;
+  /* alternative = width: 33% aber müsste dann immer angepasst werden wenn neues dazu kommt */
+  /* flex-grow, flex-shrink, flex-basis */
+  /* what is more specific wins, man kann hier alles löschen nur #search3 flex: 2 */
+}
+
+.container3 > #search3 {
+  flex: 2;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: row;
+  background: #C5D6DF;
+  padding: 20px;
+  margin: 10px;
+  height: 100%;
+  /* geht nur weil html und body auch height 100% */
+}
+
+#home4 {
+  flex: 1;
+}
+
+#logout4 {
+  flex: 1;
+}
