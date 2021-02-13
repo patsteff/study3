@@ -8,31 +8,36 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Home</title>
+    <title>dMädels Chor</title>
     <script src=""></script>
     <!--<link rel="stylesheet" href="style.css" title="external style sheet">-->
   </head>
   <body>
     <!-- START NAV -->
-    <nav class="py-2 bg-light navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="">
             <img src="https://dmaedels.ch/wp-content/uploads/2020/08/cropped-dMadels_Logo.png" class="logo" alt="logo"></img>
         </a>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Zukunft</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Jetzt</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Vergangenheit</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          Menu<span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Zukunft</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Jetzt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vergangenheit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- END NAV -->
@@ -164,15 +169,14 @@
   <div class="card bg-dark concerttext">
   <img class="card-img" src="https://images.unsplash.com/photo-1482627750753-afdba16659ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Card image">
   <div class="card-img-overlay">
-    <div class="noch mx-auto text-center">
-      <div class="extra">
+    <div class="noch mx-auto text-end">
         <h5 class="card-title mt-5 extra">Card title</h5>
         <p class="card-text extra">This is a wider cardnger.</p>
         <p class="card-text extra">Last updated 3 mins ago</p>
-      </div>
     </div>
   </div>
 </div>
 </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
 </html>

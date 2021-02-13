@@ -8,6 +8,17 @@ body {
   overflow-x: hidden;
 }
 
+#mainNav {
+  min-height: 3.5rem;
+  background-color: #fff;
+}
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.75rem;
+  color: #64a19d;
+  border: 1px solid #64a19d;
+}
+
 .navbar-brand img {
   max-height: 50px;
 }
