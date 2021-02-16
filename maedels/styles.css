@@ -6,6 +6,7 @@
 body {
   display: block;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 #mainNav {
@@ -40,19 +41,6 @@ section {
   padding-bottom: 50px;
 }
 
-section h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #06656F;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-size: 16px;
-  font-weight: 300;
-}
-
 #hero .col {
   justify-content: center;
   flex-direction: column;
@@ -69,6 +57,10 @@ section p {
   width: 100%;
 }
 
+.fototext {
+  margin-left: 20px;
+}
+
 #hero .card {
   box-shadow: 11px 7px 16px lightgrey;
   border: 0;
@@ -79,14 +71,98 @@ section p {
   color: #06656F;
 }
 
+.serif {
+  font-family: 'PT Serif', serif;
+  color: black;
+  text-align: left;
+  line-height: 1.2;
+}
+
+#hzwei {
+  font-size: 25px;
+}
+
+.small-title {
+  font-size: 35px;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 35px;
+}
+
+.dividerline {
+  width: 40px;
+  border-top: 3px solid #82d7c7;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonrow {
+  width: 20%;
+  height: 40px;
+  font-size: 16px;
+  background-color: #06656f;
+  font-weight: bold;
+  border: none;
+}
+
+.buttonrow:hover {
+  background-color: #82D7C7;
+}
+
+section p {
+  font-size: 16px;
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.containera {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.imagea {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #06656F;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.containera:hover .overlay {
+  height: 100%;
+}
+
+.texta {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 #contact {
   text-align: center;
   background-color: #82D7C7;
   color: white;
-}
-
-#contact h2 {
-
 }
 
 .noch {
