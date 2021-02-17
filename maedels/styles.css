@@ -3,10 +3,21 @@
   justify-content: center;
   background-color: #f8f9fa;
 } */
+:root {
+--primary: #64a19d;
+--secondary: #6c757d;
+--gray: #6c757d;
+--gray-dark: #343a40;
+}
+
 body {
   display: block;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
+}
+
+footer, header, main, nav, section {
+  display: block;
 }
 
 #mainNav {
@@ -78,18 +89,24 @@ section {
   line-height: 1.2;
 }
 
+.center-serif {
+  font-family: 'PT Serif', serif;
+  color: white;
+  line-height: 1.2;
+}
+
 #hzwei {
   font-size: 25px;
 }
 
 .small-title {
-  font-size: 35px;
+  font-size: 45px;
 }
 
 h1 {
   padding: 0;
   margin: 0;
-  font-size: 35px;
+  font-size: 45px;
 }
 
 .dividerline {
@@ -99,8 +116,16 @@ h1 {
   margin-bottom: 20px;
 }
 
+.dividerline-white {
+  width: 40px;
+  border-top: 3px solid white;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
 .buttonrow {
-  width: 20%;
+  width: 120px;
   height: 40px;
   font-size: 16px;
   background-color: #06656f;
@@ -108,8 +133,20 @@ h1 {
   border: none;
 }
 
+.buttonroww {
+  width: 120px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
 .buttonrow:hover {
   background-color: #82D7C7;
+}
+
+.shadowimage {
+  box-shadow: 11px 7px 16px lightgrey;
 }
 
 section p {
@@ -123,6 +160,7 @@ section p {
   position: relative;
   width: 400px;
   height: 400px;
+  box-shadow: 11px 7px 16px lightgrey;
 }
 
 .imagea {
@@ -161,7 +199,7 @@ section p {
 
 #contact {
   text-align: center;
-  background-color: #82D7C7;
+  background-color: #06656F;
   color: white;
 }
 
@@ -183,9 +221,25 @@ section p {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://images.unsplash.com/photo-1482627750753-afdba16659ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://dmaedels.ch/wp-content/uploads/2020/08/titel.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+}
+
+.masthead h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.9rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.masthead h2 {
+  max-width: 20rem;
+  font-size: 1.5rem;
 }
