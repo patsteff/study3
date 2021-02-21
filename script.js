@@ -25,6 +25,25 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 
+function mutation(arr) {
+  let original = arr[0].toLowerCase().split("");
+  let letters = arr[1].toLowerCase().split("");
+  let i = 0;
+  while (i<letters.length) {
+    if (original.indexOf(letters[i])<0) {
+      return false;
+    }
+    i++
+  }
+  return true;
+}
+
+let testMut = ["Mary", "Army"];
+
+console.log(mutation(["Mary", "Army"]));
+
+
+
 
 
 let test = "aaBBbcde";
