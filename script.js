@@ -37,8 +37,30 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 
+<<<<<<< HEAD
 let testDuplicate = "aaBBbcde";
 let testPow = [12433, 2];
+=======
+function mutation(arr) {
+  let original = arr[0].toLowerCase().split("");
+  let letters = arr[1].toLowerCase().split("");
+  let i = 0;
+  while (i<letters.length) {
+    if (original.indexOf(letters[i])<0) {
+      return false;
+    }
+    i++
+  }
+  return true;
+}
+
+let testMut = ["Mary", "Army"];
+
+console.log(mutation(["Mary", "Army"]));
+
+
+
+>>>>>>> 0d31cd22197753fb1d1ef7ba75a067e61749a6a9
 
 console.log(duplicateCount("indivisibbbillity"));
 console.log(duplicateCount("abBcde"));
