@@ -1,3 +1,27 @@
+function crap(x, bags, cap){
+  let listCrap = [];
+  if (bags == 0) {
+    return "Cr@p"
+  } else {
+        for (let i = 0; i < x.length; i++) {
+          if (x[i].indexOf("@")>=0) {
+          listCrap.push(x[i].indexOf("@"));
+          console.log(listCrap.length);
+          }
+     }
+    if (bags == listCrap.length) {
+      return "Clean";
+    } else {
+      return "Cr@p";
+    }
+  }
+}
+
+testCrapi = ['_','_','_','_'], ['_','_','_','@'], ['_','_','@','_']], 2, 2);
+
+console.log(crap([['_','_','_','_'], ['_','_','_','@'], ['_','_','@','_']], 2, 2));
+
+
 function digPow(n, p){
   // ...
   let arr = n.toString().split('').map(Number);
@@ -6,7 +30,7 @@ function digPow(n, p){
 }
 
 function pow(x) {
-  
+
 }
 
 
@@ -37,30 +61,8 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 
-<<<<<<< HEAD
 let testDuplicate = "aaBBbcde";
 let testPow = [12433, 2];
-=======
-function mutation(arr) {
-  let original = arr[0].toLowerCase().split("");
-  let letters = arr[1].toLowerCase().split("");
-  let i = 0;
-  while (i<letters.length) {
-    if (original.indexOf(letters[i])<0) {
-      return false;
-    }
-    i++
-  }
-  return true;
-}
-
-let testMut = ["Mary", "Army"];
-
-console.log(mutation(["Mary", "Army"]));
-
-
-
->>>>>>> 0d31cd22197753fb1d1ef7ba75a067e61749a6a9
 
 console.log(duplicateCount("indivisibbbillity"));
 console.log(duplicateCount("abBcde"));
