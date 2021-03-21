@@ -39,15 +39,14 @@ body {
 }
 
 nav ul li a {
-  font-size: 18px;
-  color: var(--gray);
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .masthead {
   position: relative;
   width: auto;
-  height: auto;
+  height: 100vh;
   min-height: 35rem;
   padding: 15rem 0;
   background: linear-gradient(
@@ -65,15 +64,15 @@ nav ul li a {
 }
 
 .masthead-box {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .masthead h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 5rem;
-  line-height: 5rem;
+  font-size: 6.5rem;
+  line-height: 6.5rem;
   letter-spacing: 0.8rem;
   background: linear-gradient(
     rgba(255, 255, 255, 0.97),
@@ -86,6 +85,11 @@ nav ul li a {
 .masthead h2 {
   max-width: 30rem;
   font-size: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
 }
 
 section {
@@ -215,7 +219,7 @@ section p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--primary) F;
+  background-color: var(--primary);
   overflow: hidden;
   width: 100%;
   height: 0;
