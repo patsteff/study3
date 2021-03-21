@@ -1,34 +1,37 @@
-/* .startpicture {
-  display: flex;
-  justify-content: center;
-  background-color: #f8f9fa;
-} */
 :root {
---primary: #64a19d;
---secondary: #6c757d;
---gray: #6c757d;
---gray-dark: #343a40;
+  --primary: #06656f;
+  --secondary: #82d7c7;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
 }
 
 body {
-  display: block;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
-}
-
-footer, header, main, nav, section {
-  display: block;
 }
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
 }
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.transparent {
+  background-color: transparent !important;
 }
 
 .navbar-brand img {
@@ -36,15 +39,53 @@ footer, header, main, nav, section {
 }
 
 nav ul li a {
-  color: #06656F;
   font-size: 18px;
+  color: var(--gray);
   font-weight: 600;
-  margin: auto 10px;
 }
 
-nav ul li a:hover {
-  color: #82D7C7;
-  background-color: grey;
+.masthead {
+  position: relative;
+  width: auto;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.7) 75%,
+      #000000 100%
+    ),
+    url("https://dmaedels.ch/wp-content/uploads/2020/08/titel.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+.masthead-box {
+  margin-top: 20%;
+}
+
+.masthead h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.97),
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.masthead h2 {
+  max-width: 30rem;
+  font-size: 1.5rem;
 }
 
 section {
@@ -73,24 +114,24 @@ section {
 }
 
 #hero .card {
-  box-shadow: 11px 7px 16px lightgrey;
+  box-shadow: 11px 7px 16px var(--gray);
   border: 0;
 }
 
 #hero i {
-  color; red;
-  color: #06656F;
+  color: red;
+  color: #06656f;
 }
 
 .serif {
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   color: black;
   text-align: left;
   line-height: 1.2;
 }
 
 .center-serif {
-  font-family: 'PT Serif', serif;
+  font-family: "PT Serif", serif;
   color: white;
   line-height: 1.2;
 }
@@ -111,7 +152,7 @@ h1 {
 
 .dividerline {
   width: 40px;
-  border-top: 3px solid #82d7c7;
+  border-top: 3px solid var(--secondary);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -128,7 +169,7 @@ h1 {
   width: 120px;
   height: 40px;
   font-size: 16px;
-  background-color: #06656f;
+  background-color: var(--primary);
   font-weight: bold;
   border: none;
 }
@@ -142,11 +183,11 @@ h1 {
 }
 
 .buttonrow:hover {
-  background-color: #82D7C7;
+  background-color: var(--secondary);
 }
 
 .shadowimage {
-  box-shadow: 11px 7px 16px lightgrey;
+  box-shadow: 11px 7px 16px var(--gray);
 }
 
 section p {
@@ -160,7 +201,7 @@ section p {
   position: relative;
   width: 400px;
   height: 400px;
-  box-shadow: 11px 7px 16px lightgrey;
+  box-shadow: 11px 7px 16px var(--gray);
 }
 
 .imagea {
@@ -174,11 +215,11 @@ section p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #06656F;
+  background-color: var(--primary) F;
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .containera:hover .overlay {
@@ -199,7 +240,7 @@ section p {
 
 #contact {
   text-align: center;
-  background-color: #06656F;
+  background-color: var(--primary);
   color: white;
 }
 
@@ -213,33 +254,4 @@ section p {
 .extra {
   display: grid;
   place-items: center;
-}
-
-.masthead {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("https://dmaedels.ch/wp-content/uploads/2020/08/titel.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-.masthead h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 5rem;
-  line-height: 5rem;
-  letter-spacing: 0.9rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-
-.masthead h2 {
-  max-width: 20rem;
-  font-size: 1.5rem;
 }

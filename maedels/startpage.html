@@ -13,13 +13,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@300&display=swap"
     rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>dMädels Chor</title>
   <script src=""></script>
 </head>
 
 <body id="page-top">
   <!-- START NAV -->
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light" id="mainNav">
+  <nav class="nav navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <img src="https://dmaedels.ch/wp-content/uploads/2020/08/cropped-dMadels_Logo.png" class="logo"
@@ -46,11 +47,11 @@
   <!-- END NAV -->
   <!-- Masthead -->
   <header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center mt-5 h-100 wrapper">
-          <h2 class="mx-auto mt-5 my-0">Nächstes Konzert</h2>
-          <h1 class="mx-auto mt-3 mb-5 text-uppercase">Kulturschock</h1>
-          <h2 class="mx-auto mt-2 mb-5">13. Juni 2021 im Gaswerk Schwyz</h2>
+    <div class="container d-flex h-100 align-items-center masthead-box">
+        <div class="mx-auto text-center">
+          <h2 class="text-white-50 mx-auto mt-2">Nächstes Konzert</h2>
+          <h1 class="mx-auto my-0 text-uppercase">Kulturschock</h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">13. Juni 2021 im Gaswerk Schwyz</h2>
           <a class="btn btn-primary js-scroll-trigger" href="#concerts">Konzerte</a>
         </div>
     </div>
@@ -224,6 +225,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
+
+  <script>
+    $(window).scroll(function() {
+  if ($(document).scrollTop() > 50) {
+    $('nav').removeClass('transparent');
+  } else {
+    $('nav').addClass('transparent');
+  }
+});
+  </script>
 </body>
 
 </html>
