@@ -34,13 +34,17 @@ body {
   background-color: transparent !important;
 }
 
-.navbar-brand img {
-  max-height: 50px;
-}
-
 nav ul li a {
   font-size: 1.2rem;
+  color: var(--gray-dark);
+}
+
+.transparent-text {
   color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-brand img {
+  max-height: 50px;
 }
 
 .masthead {

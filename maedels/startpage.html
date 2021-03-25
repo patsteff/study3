@@ -316,6 +316,14 @@
             $("nav").addClass("transparent");
           }
         });
+        $(window).scroll(function () {
+          if ($(document).scrollTop() > 50) {
+            $(".nav-link").removeClass("transparent-text");
+          } else {
+            $(".nav-link").addClass("transparent-text");
+          }
+        });
+
       </script>
     </body>
   </html>
