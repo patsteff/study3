@@ -45,12 +45,16 @@ nav ul li a {
 
 nav ul li a:hover {
   font-weight: 600;
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--secondary);
 }
 
-.navbar-brand img {
-  max-height: 50px;
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
 }
 
 .masthead {
@@ -97,28 +101,23 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
-.btn-primary {
-  background-color: var(--primary);
-  border: none;
-}
-
 section {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-#hero .col {
+#intro .col {
   justify-content: center;
   flex-direction: column;
   display: flex;
 }
 
-#hero .img-col {
+#intro .img-col {
   justify-content: center;
   margin-top: 100px;
 }
 
-#hero img {
+#intro img {
   max-width: 130% !important;
   width: 100%;
 }
@@ -127,12 +126,12 @@ section {
   margin-left: 20px;
 }
 
-#hero .card {
+#intro .card {
   box-shadow: 11px 7px 16px var(--gray);
   border: 0;
 }
 
-#hero i {
+#intro i {
   color: red;
   color: #06656f;
 }
@@ -150,8 +149,9 @@ section {
   line-height: 1.2;
 }
 
-#hzwei {
+.undertitle {
   font-size: 25px;
+  margin: 10px;
 }
 
 .small-title {
