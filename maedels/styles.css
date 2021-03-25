@@ -19,7 +19,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: var(--primary);
+  background-color: white;
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -30,7 +30,7 @@ body {
   border: 1px solid var(--secondary);
 }
 
-.not-transparent {
+.transparent {
   background-color: transparent !important;
 }
 
@@ -41,7 +41,6 @@ nav ul li a {
 
 .transparent-text {
   color: rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0.8);
 }
 
 nav ul li a:hover {
