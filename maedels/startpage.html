@@ -36,7 +36,10 @@
 
     <body id="page-top">
       <!-- START NAV -->
-      <nav class="nav navbar navbar-expand-lg fixed-top" id="mainNav">
+      <nav
+        class="nav navbar navbar-expand-lg fixed-top not-transparent"
+        id="mainNav"
+      >
         <div class="container">
           <button
             class="navbar-toggler"
@@ -311,9 +314,9 @@
       <script>
         $(window).scroll(function () {
           if ($(document).scrollTop() > 50) {
-            $("nav").removeClass("transparent");
+            $("nav").removeClass("not-transparent");
           } else {
-            $("nav").addClass("transparent");
+            $("nav").addClass("not-transparent");
           }
         });
         $(window).scroll(function () {

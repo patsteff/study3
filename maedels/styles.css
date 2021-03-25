@@ -19,7 +19,7 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: white;
+  background-color: var(--primary);
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -30,7 +30,7 @@ body {
   border: 1px solid var(--secondary);
 }
 
-.transparent {
+.not-transparent {
   background-color: transparent !important;
 }
 
@@ -41,6 +41,13 @@ nav ul li a {
 
 .transparent-text {
   color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+nav ul li a:hover {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .navbar-brand img {
