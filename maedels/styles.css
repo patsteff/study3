@@ -36,12 +36,6 @@ body {
   text-align: left;
   background-color: #fff;
   overflow-x: hidden;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#divtoflex {
-  flex-wrap: wrap;
 }
 
 nav {
@@ -132,7 +126,6 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
 }
 
 .masthead-box {
@@ -198,19 +191,6 @@ section {
 #intro i {
   color: red;
   color: #06656f;
-}
-
-.serif {
-  font-family: "PT Serif", serif;
-  color: black;
-  text-align: left;
-  line-height: 1.2;
-}
-
-.center-serif {
-  font-family: "PT Serif", serif;
-  color: white;
-  line-height: 1.2;
 }
 
 .small-title {
