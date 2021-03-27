@@ -3,6 +3,7 @@
   --secondary: #82d7c7;
   --gray: #6c757d;
   --gray-dark: #343a40;
+  --gray-light: #d5dfe7;
   --breakpoint-md: 768px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -172,7 +173,8 @@ section {
 
 #intro .img-col {
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
 #intro img {
@@ -180,17 +182,22 @@ section {
   width: 100%;
 }
 
-.fototext {
-  margin-left: 20px;
+#wir_sind {
+  padding-right: 75px;
 }
 
-#intro .card {
-  border: 0;
+.gray-background {
+  background-color: var(--gray-light);
 }
 
-#intro i {
-  color: red;
-  color: #06656f;
+.card-details {
+  flex-direction: row;
+}
+
+div ul {
+  list-style-type: none;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
 }
 
 .small-title {
@@ -200,7 +207,7 @@ section {
 h1 {
   padding: 0;
   margin: 0;
-  font-size: 45px;
+  font-size: 3rem;
 }
 
 .dividerline {
