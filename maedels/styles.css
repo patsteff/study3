@@ -15,7 +15,6 @@ body {
   text-align: left;
   background-color: #fff;
   overflow-x: hidden;
-  display: flex;
 }
 
 #mainNav {
