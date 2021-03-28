@@ -200,6 +200,13 @@ div ul {
   margin: 0; /* Remove margins */
 }
 
+.swissness {
+  background-image: url("https://dmaedels.ch/wp-content/uploads/2019/04/swissness_1002.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .small-title {
   font-size: 45px;
 }
