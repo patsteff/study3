@@ -192,6 +192,7 @@ section {
 
 .card-details {
   flex-direction: row;
+  line-height: 2;
 }
 
 div ul {
