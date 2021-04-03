@@ -1,5 +1,3 @@
-console.log("hallo patricia");
-
 let myJSON = [
   {
     Listid: 322,
@@ -71,8 +69,6 @@ let myJSON = [
   },
 ];
 
-console.log(myJSON[0].DHpos + myJSON[0].SLpos);
-
 function testAthlete(obj) {
   let result = [];
   // array 0=GS, 1=SL, 2=DH (speed), 3=SG
@@ -100,9 +96,14 @@ function testAthlete(obj) {
   return solution;
 }
 
-let mauro = testAthlete(myJSON[0]);
-let oliver = testAthlete(myJSON[1]);
+let athletes;
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    athletes = data;
+    let mauro = testAthlete(athletes[0]);
+    let oliver = testAthlete(athletes[1]);
 
-let local = JSON.parse(data);
-
-console.log(local);
+    //console.log(typeof data);
+  })
+  .catch((err) => console.error(err));
