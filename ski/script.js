@@ -6,7 +6,7 @@ function skiBuenden(firstname, lastname, fiscode, GSpos, SLpos, DHpos, SGpos) {
   this.SLpos = SLpos;
   this.DHpos = DHpos;
   this.SGpos = SGpos;
-  console.log(Object.values(this));
+  console.log(testAthlete(this));
 }
 
 function testAthlete(obj) {
