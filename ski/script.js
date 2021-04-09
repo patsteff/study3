@@ -6,7 +6,7 @@ function skiBuenden(firstname, lastname, fiscode, GSpos, SLpos, DHpos, SGpos) {
   this.SLpos = SLpos;
   this.DHpos = DHpos;
   this.SGpos = SGpos;
-  console.log(this);
+  testAthlete(this);
 }
 
 function testAthlete(obj) {
@@ -43,7 +43,7 @@ fetch("data.json")
   .then((data) => {
     athletes = data;
     for (let i = 0; i < athletes.length; i++) {
-      new skiBuenden(
+      let small = new skiBuenden(
         athletes[i].Firstname,
         athletes[i].Lastname,
         athletes[i].Fiscode,
@@ -52,6 +52,7 @@ fetch("data.json")
         athletes[i].DHpos,
         athletes[i].SGpos
       );
+      console.log(small);
     }
   })
   .catch((err) => console.error(err));
