@@ -6,7 +6,7 @@ function skiBuenden(firstname, lastname, fiscode, GSpos, SLpos, DHpos, SGpos) {
   this.SLpos = SLpos;
   this.DHpos = DHpos;
   this.SGpos = SGpos;
-  console.log(testAthlete(this));
+  console.log(this);
 }
 
 function testAthlete(obj) {
@@ -53,7 +53,5 @@ fetch("data.json")
         athletes[i].SGpos
       );
     }
-
-    //console.log(typeof data);
   })
   .catch((err) => console.error(err));
