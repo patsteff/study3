@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // DRUM KIT
+  // listen and log (see function) all keydown events in console in window
+  window.addEventListener("keydown", playSound);
+
+  function playSound(e) {
+    console.log(e.keyCode);
+    // suche ob 1 element mit data-key = e.keyCode ist
+    const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+    // reset audio and play
+    audio.currentTime = 0;
+    audio.play();
+    // add css class to an element (jquery => key.addClass('playing')), there is also remove() and toggle()
+    key.classList.add("playing");
+    // set timeout for something
+    setTimeout(function () {
+      key.classList.remove("playing");
+    }, 500);
+  }
+  //remove classList after transition end
+  // select in keys all elements with class key and add event listener
+  const keys = document.querySelectorAll(".key");
+  keys.forEach((key) =>
+    key.addEventListener("transitionend", removeTransition)
+  );
+  // this is the key, because whatever got called against it
+  function removeTransition(e) {
+    if (e.propertyName !== "transform") return;
+    this.classList.remove("playing");
+  }
+
+  // CLOCK
+  // run setDate every 1000ms
+  setInterval(setDate, 1000);
+  // current date, get seconds (minutes, hours)
+  const now = new Date();
+  const seconds = now.getSeconds();
+  // calculate degrees
+  const secondsDeg = (seconds / 60) * 360 + 90;
+  // add style to secondhand
+  const secondHand = document.querySelector(".second-hand");
+  secondHand.style.transform = `rotate(${secondsDeg}deg)`;
+</script>
+
+<style>
+  /* css transform-orgigin, um ankerpunkt rechts */
+  .hand {
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    /* oder ease in oder so */
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+</style>
