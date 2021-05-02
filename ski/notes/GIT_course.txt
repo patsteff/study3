@@ -1,29 +1,24 @@
-lesson_1_reflections.txt
-
 // file compare, build in with command line
 fc old_file.js new_file.js (file compare, on GIT bash and Mac/Linux -> Diff -u)
 
-// befehle
+// General commands
 cd ~                          # change directories to your home directory
 mkdir version-control         # make version-control directory
 cd version-control            # go to version-control directory
-mkdir reflections             # create reflections directory
-cd reflections                # go to reflections directory
 
-// why version contorl?
-helps to find bugs, history of changes etc. 
-one commit per logical change RULE OF THUMB
-
+// git log
 Exit git log: q
+git log --graph --oneline master coins
+-> schauen welche commites es wo gab
+
 git config --global color.ui auto
 
 You are in 'detached HEAD' state
-HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit
 
-git checkout commit id, should now last commit ID to go back! 
-
-schauen welche commites es wo gab. 
-git log --graph --oneline master coins.
+// git checkout
+git checkout commitId
+should now last commit ID to go back!
 
 git show <commitid>
 -> compare this commit to its parent without knowing the parent's id
