@@ -1,0 +1,69 @@
+lesson_1_reflections.txt
+
+// file compare, build in with command line
+fc old_file.js new_file.js (file compare, on GIT bash and Mac/Linux -> Diff -u)
+
+// befehle
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+
+// why version contorl?
+helps to find bugs, history of changes etc. 
+one commit per logical change RULE OF THUMB
+
+Exit git log: q
+git config --global color.ui auto
+
+You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+git checkout commit id, should now last commit ID to go back! 
+
+schauen welche commites es wo gab. 
+git log --graph --oneline master coins.
+
+git show <commitid>
+-> compare this commit to its parent without knowing the parent's id
+
+git branch -d coins
+-> coins = branch name, delete label
+
+git remote -v
+für remote verbindung sehen
+
+git commit file -m <msg> 
+
+git push origin (remote branch) test (local branch) -> pusht auf github
+
+git pull origin master (holt remote branch nach local)
+
+branch: für neues feature, context switching
+clone: klonen, unabhängig vom ehemaligen
+fork: nur github, verbindung bleibt bestehen
+
+git pull origin/master ODER git fetch + git merge origin/master master
+
+git merge master origin/master
+-> if resolve conflic open this file
+dann wieder git add chili-recipe.txt
+
+git branch new-branch-name (erstellt neuen branch)
+git checkout new-branch-name (checkout this branch)
+git add cake-recipe.txt (add this file to stage)
+git commit 
+git push origin different-oil (push to origin) 
+
+what gets changed?
+edit and save readme.md -> local working directory
+git add readme.md -> local staging area
+git commit -> local master branch
+git pull origin master -> local master branch
+git push origin master -> github master branch
+merge alt pull request -> github master branch
+
+lokale branches löschen
+git remote prune origin (dann sien die referenzen weg)
+git branch -d <name of localbranch>
