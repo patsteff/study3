@@ -10,6 +10,8 @@ cd version-control            # go to version-control directory
 Exit git log: q
 git log --graph --oneline master coins
 -> schauen welche commites es wo gab
+git log besseres format
+git log --pretty=format:"%h %an %ar - %s"
 
 git config --global color.ui auto
 
@@ -19,59 +21,68 @@ HEAD is what Git calls the commit you are currently on. You can “detach” the
 // git checkout
 git checkout commitId
 should now last commit ID to go back!
+git checkout .
+-> Use git checkout to clear any changes in the working directory.
 
+// git show
 git show <commitid>
 -> compare this commit to its parent without knowing the parent's id
+While git log tells you the commit author and message, to view the changes made in the commit you need to use the the command git show
+Like with other commands, by default it will show the changes in the HEAD commit. Use git show <commit-hash>
 
-git branch -d coins
--> coins = branch name, delete label
+// git diff
+git diff
+By default, git diff will only compare the working directory and not the staging area.
+git diff -staged
+To compare the changes in the staging area against the previous commit you provide the staged parameter git diff --staged
 
-git remote -v
-für remote verbindung sehen
+//commit
+git commit file -m <msg>
+git commit --no-edit (when want to use default commit message)
 
+// branch
+git branch -r (list of all the remote branches)
+git branch -a (will include remote branches also)
+git branch -v (will include the HEAD commit message)
+git branch new-branch-name (erstellt neuen branch)
+git checkout new-branch-name (checkout this branch)
+git add cake-recipe.txt (add this file to stage)
+git commit
+git push origin different-oil (push to origin)
+
+// remote branches
+git remote -v (für remote verbindung sehen)
 git remote add origin /s/remote-project/1
 add remote repo named origin (normally)
 
-git commit file -m <msg> 
-git commit --no-edit (when want to use default commit message)
-
+// push
 git push origin (remote branch) test (local branch) -> pusht auf github
-git push origin master
-by default all git repos have a master branch where the code is worked on
+git push origin master (by default all git repos have a master branch where the code is worked on)
 
+// pull oder fetch & merge
 git pull origin master (holt remote branch nach local)
-
-branch: für neues feature, context switching
-clone: klonen, unabhängig vom ehemaligen
-fork: nur github, verbindung bleibt bestehen
-
 git pull origin/master ODER git fetch + git merge origin/master master
 
+git fetch (downloads the changes from the remote repository into a separate branch named remotes/<remote-name>/<remote-branch-name>)
 git merge master origin/master
--> if resolve conflic open this file
-dann wieder git add chili-recipe.txt
+-> if resolve conflict open this file (dann wieder git add file.txt)
+
+git merge remotes/<remote-name>/<remote-branch-name> master
+-> will merge the fetched changed into master
+git merge remotes/origin/master (remote already fetched, want to merge from origin/master)
+-> during a merge, Git will attempt to autocombine the commits. when no conflicts exist -> fast forward
 
 WANT TO MERGE TO master
 git checkout master
 git merge new_branch
 -> 1. checkout target branch, then merge new branch
 und nachher löschen -> git branch -d <branch_name>
+git branch -d coins
+-> coins = branch name, delete label
 
-git fetch (downloads the changes from the remote repository into a separate branch named remotes/<remote-name>/<remote-branch-name>)
-git branch -r (list of all the remote branches)
-git branch -a (will include remote branches also)
-git branch -v (will include the HEAD commit message)
-git merge remotes/<remote-name>/<remote-branch-name> master
--> will merge the fetched changed into master
-git merge remotes/origin/master
--> during a merge, Git will attempt to autocombine the commits. when no conflicts exist -> fast forward
--> hier: remote fetched, want to merge from origin/master 
-
-git branch new-branch-name (erstellt neuen branch)
-git checkout new-branch-name (checkout this branch)
-git add cake-recipe.txt (add this file to stage)
-git commit 
-git push origin different-oil (push to origin) 
+lokale branches löschen
+git remote prune origin (dann sien die referenzen weg)
+git branch -d <name of localbranch>
 
 what gets changed?
 edit and save readme.md -> local working directory
@@ -81,26 +92,9 @@ git pull origin master -> local master branch
 git push origin master -> github master branch
 merge alt pull request -> github master branch
 
-lokale branches löschen
-git remote prune origin (dann sien die referenzen weg)
-git branch -d <name of localbranch>
-
+// gitignore (sollen von git ignoriert werden)
 echo '*.tmp' > .gitignore
 will create a .gitignore with content *.tmp
-
-git diff
-By default, git diff will only compare the working directory and not the staging area.
-git diff -staged
-To compare the changes in the staging area against the previous commit you provide the staged parameter git diff --staged
-
-git log besseres format
-git log --pretty=format:"%h %an %ar - %s"
-
-While git log tells you the commit author and message, to view the changes made in the commit you need to use the the command git show
-Like with other commands, by default it will show the changes in the HEAD commit. Use git show <commit-hash>
-
-git checkout .
--> Use git checkout to clear any changes in the working directory.
 
 git reset <filename> -> remove from staging area
 
