@@ -29,9 +29,15 @@ git branch -d coins
 git remote -v
 für remote verbindung sehen
 
+git remote add origin /s/remote-project/1
+add remote repo named origin (normally)
+
 git commit file -m <msg> 
+git commit --no-edit (when want to use default commit message)
 
 git push origin (remote branch) test (local branch) -> pusht auf github
+git push origin master
+by default all git repos have a master branch where the code is worked on
 
 git pull origin master (holt remote branch nach local)
 
@@ -44,6 +50,22 @@ git pull origin/master ODER git fetch + git merge origin/master master
 git merge master origin/master
 -> if resolve conflic open this file
 dann wieder git add chili-recipe.txt
+
+WANT TO MERGE TO master
+git checkout master
+git merge new_branch
+-> 1. checkout target branch, then merge new branch
+und nachher löschen -> git branch -d <branch_name>
+
+git fetch (downloads the changes from the remote repository into a separate branch named remotes/<remote-name>/<remote-branch-name>)
+git branch -r (list of all the remote branches)
+git branch -a (will include remote branches also)
+git branch -v (will include the HEAD commit message)
+git merge remotes/<remote-name>/<remote-branch-name> master
+-> will merge the fetched changed into master
+git merge remotes/origin/master
+-> during a merge, Git will attempt to autocombine the commits. when no conflicts exist -> fast forward
+-> hier: remote fetched, want to merge from origin/master 
 
 git branch new-branch-name (erstellt neuen branch)
 git checkout new-branch-name (checkout this branch)
@@ -62,3 +84,28 @@ merge alt pull request -> github master branch
 lokale branches löschen
 git remote prune origin (dann sien die referenzen weg)
 git branch -d <name of localbranch>
+
+echo '*.tmp' > .gitignore
+will create a .gitignore with content *.tmp
+
+git diff
+By default, git diff will only compare the working directory and not the staging area.
+git diff -staged
+To compare the changes in the staging area against the previous commit you provide the staged parameter git diff --staged
+
+git log besseres format
+git log --pretty=format:"%h %an %ar - %s"
+
+While git log tells you the commit author and message, to view the changes made in the commit you need to use the the command git show
+Like with other commands, by default it will show the changes in the HEAD commit. Use git show <commit-hash>
+
+git checkout .
+-> Use git checkout to clear any changes in the working directory.
+
+git reset <filename> -> remove from staging area
+
+git reset --hard
+-> combines git reset and git checkout in single command. files removed from staging area and the working directory is taken back to the state of the last commit
+gi reset --hard <commit-hash>
+-> allows to go back to any commit state, HEAD = for last-commit-hash of the branch
+
