@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Wes</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="buttons">
+            <button class="btn">Click me A</button>
+            <button class="btn">Click me B</button>
+            <button class="btn">Click me C</button>
+            <button class="btn">Click me D</button>
+            <button class="btn">Click me C</button>
+        </div>
+
+    </main>
+</body>
+
+<style>
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    button {
+        background-color: darkcyan;
+        color: white;
+        font-size: 1.2rem;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 20px;
+        width: 150px;
+        height: 65px;
+        border: none;
+        margin: 25px;
+    }
+</style>
+
+<script>
+
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach((button => {
+        button.addEventListener("click", handleBuyButtonClick);
+    }));
+
+    function handleBuyButtonClick() {
+        console.log("clicked");
+    }
+
+</script>
+
+</html>

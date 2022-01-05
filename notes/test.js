@@ -3,7 +3,6 @@ let x = 3 + y;
 
 const value = add(x,y);
 
-
 (value > 10) ? console.log("big") : console.log("small");
 
 function add(a,b) {
@@ -37,11 +36,10 @@ console.log( parseFloat("1.2343ab"));   //1.2
 console.log( parseInt("abc"));       //NaN
 
 console.log("probeprüfung");
-console.log(typeof([]));
-console.log(typeof('blabla'));
+console.log(typeof([])); // object
+console.log(typeof('blabla')); // string
 // console.log(abc); -> abc is not defined
-console.log("type of Nan");
-console.log(typeof(NaN));
+console.log(typeof(NaN)); // number
 
 console.log('Line 1\nLine 2')
 const namee = "Michael", hobby = "Hike",
@@ -91,11 +89,12 @@ function foo(name){
     console.log(Array.from(arguments).join("\n"));
     }
     
-    foo("Michael", "Gfeller", "OST", "IFS");
+console.log(foo("Michael", "Gfeller", "OST", "IFS"));
+console.log(foo("Michael"));
 
-function foo2(name, ...params){
-    console.log(1,name); // Michael
-    console.log(2,params.join(";")); // Gfeller;OST;IFS
+function foo2(name, ...params) {
+    console.log(1,name); // 1 Michael
+    console.log(2,params.join(";")); // 2 Gfeller;OST;IFS
 }
 
 foo2("Michael", "Gfeller", "OST", "IFS");
@@ -109,8 +108,6 @@ function foo() {
     d = "D";
     var e = "E";
 }
-
-foo();
 
 console.log(globalThis.af); //globalThis = global in node.js; window im Browser
 console.log(globalThis.bf); // undefined in node, im browser B

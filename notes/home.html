@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <article id="A">A</article>
+        <article id="B">B</article>
+    </main>
+</body>
+
+<style>
+    main article:first-child {
+        color: red;
+    }
+</style>
+
+<script>
+
+    function createGreeting(greeting = "") {
+        const myGreet = greeting.toUpperCase();
+
+        return function (name) {
+            return `${myGreet} ${name}`;
+        };
+    }
+
+    //closure
+    const sayHello = createGreeting('hello');
+    const sayHey = createGreeting('hey');
+    console.log(sayHello('wes'));
+    console.log(sayHello('kait'));
+    console.log(sayHey('kait'));
+
+    //create element
+    const myParagraph = document.createElement('p');
+    myParagraph.textContent = 'I am a p!';
+    myParagraph.classList.add('special');
+    console.log(myParagraph);
+
+    document.body.appendChild(myParagraph);
+
+</script>
+
+</html>
