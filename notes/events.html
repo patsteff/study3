@@ -46,17 +46,28 @@
 </style>
 
 <script>
+    var x2 = 1;
+    var y2 = 2;
+    function print2() {
 
-    const buttons = document.querySelectorAll('.btn');
-
-    buttons.forEach((button => {
-        button.addEventListener("click", handleBuyButtonClick);
-    }));
-
-    function handleBuyButtonClick() {
-        console.log("clicked");
+        console.log(x2); //I -> UNDEFINED
+        console.log(y2); //II -> UNDEFINED
+        var x2 = 3;
+        var y2 = 4;
     }
 
+    print2(2);
+
+
+    /*     let x = 1;
+        let y = 2;
+        function print(x) {
+            console.log(x);  //III -> Uncaught SyntaxError: Identifier 'x' has already been declared
+            console.log(y);  //IV
+            let x = 3;
+            let y = 4;
+        }
+        print(3);  */
 </script>
 
 </html>

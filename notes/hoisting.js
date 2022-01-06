@@ -6,6 +6,8 @@ const page = 10;       // Cannot access 'page' before initialization
 
 
 
+
+
 sayHi(); // this code block works
 
 function sayHi() {
