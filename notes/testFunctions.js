@@ -21,21 +21,7 @@ function foo2(name, ...params) {
 
 foo2("Michael", "Gfeller", "OST", "IFS");
 
-//scope browser anders als node (b ist hier undefined)
 
-af = "A"; //wird auf das globale Objekt gelegt
-var bf = "B"; // wird auf den aktuellen Scope gelegt
-let c = "C" // let, const werden nicht mehr auf das globale Objekt gelegt
-function foo() {
-    d = "D";
-    var e = "E";
-}
-
-console.log(globalThis.af); //globalThis = global in node.js; window im Browser
-console.log(globalThis.bf); // undefined in node, im browser B
-console.log(globalThis.c, c);
-console.log(globalThis.d);
-console.log(globalThis.e);
 
 // console.log("why this is an error");
 // const abuur = function print(){
