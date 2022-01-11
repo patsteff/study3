@@ -27,7 +27,7 @@ console.log( parseInt("abc"));           //NaN
 console.log( div0 == NaN);                 //false
 console.log(NaN == NaN)                // immer false
 console.log("is it true?")      
-console.log( isNaN(div0));                //true (typeof -> number)
+console.log( isNaN(3/0));                //false (typeof -> number)
 
 console.log( +(true));                          //1
 console.log( +(false));                      //0
@@ -35,7 +35,8 @@ console.log( +("1ab"));                      //NaN
 console.log( +("123"));                          //123
 console.log( +([]));                            //0
 console.log( parseInt("1.8234ab"));             //1
-console.log( parseFloat("1.2343ab"));             //1.2
+console.log( parseFloat("1.2343ab"));             //1.2343
+console.log( parseFloat("1.2a343ab"));             //1.2343
 console.log( parseInt("abc"));                    //NaN
 
 console.log("probeprüfung");
