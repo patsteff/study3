@@ -3,7 +3,9 @@
 // <div id="app" v-cloak>
 
 // loop use key (performance etc.)
-//<p v-for="str in inputs" key="str">{{str}}</p>
+<p v-for="str in inputs" key="str">{{str}}</p>
+//or
+<p v-for="(str,i) in inputs" key="i">{{str}}</p>
 
 // props read only
 
@@ -60,3 +62,4 @@ app.component('custom-form', {
                 }
             },
         })
+ 
