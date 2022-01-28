@@ -8,6 +8,9 @@
 <p v-for="(str,i) in inputs" :key="i">{{str}}</p>
 
 // props read only
+// computed for update values
+
+// views -> connected to browser, component -> reusable imported
 
 //child component + parent passing data
 app.component('custom-form', {
